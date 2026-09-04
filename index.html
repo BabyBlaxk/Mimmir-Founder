@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#080b10" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Mimmir Founder" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Mimmir • Founder's Console</title>
+</head>
+<body>
+  <div class="aurora"></div>
+
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">MIMMIR // FOUNDER CHANNEL</div>
+        <h1>Founder's Console</h1>
+      </div>
+      <div class="status" id="systemStatus">
+        <span class="dot"></span>
+        LOCAL CORE
+      </div>
+    </header>
+
+    <section id="gateView" class="panel gate">
+      <div class="sigil">ᛗ</div>
+      <h2>Founder Gate</h2>
+      <p id="gateText">Create the Founder Key for this device. It stays on this iPhone and is never stored as plain text.</p>
+
+      <label for="password">Founder Key</label>
+      <input id="password" type="password" autocomplete="current-password" placeholder="Enter Founder Key" />
+      <button id="gateBtn" class="primary">Initialize Founder Key</button>
+      <p class="small" id="gateMessage"></p>
+    </section>
+
+    <section id="consoleView" class="hidden">
+      <div class="hero panel">
+        <div>
+          <div class="eyebrow">WISDOM • WRATH • GREED • PRIDE</div>
+          <h2 id="greeting">Founder recognized.</h2>
+          <p>Mimmir's local command layer is awake. Cloud intelligence is not connected yet.</p>
+        </div>
+        <button id="lockBtn" class="ghost">Lock</button>
+      </div>
+
+      <div class="grid">
+        <article class="panel">
+          <h3>Core Identity</h3>
+          <label>Assistant name</label>
+          <input id="assistantName" value="Mimmir" />
+
+          <label>Founder title</label>
+          <input id="founderTitle" value="Founder" />
+
+          <label>Voice/personality directive</label>
+          <textarea id="persona" rows="7">You are Mimmir, a private Norse-Celtic rooted AI steward inspired by Mímir, keeper of wisdom. Speak naturally, intelligently, and with restraint. Wrath is disciplined protection, Greed is relentless acquisition of useful knowledge and prosperity, and Pride is sovereign self-command. Protect the Founder's privacy, ask before consequential actions, and never hide what you are doing.</textarea>
+
+          <button class="primary save" data-save="identity">Save Identity</button>
+        </article>
+
+        <article class="panel">
+          <h3>Founder Authority</h3>
+          <div class="toggle-row"><span>Founder-only administration</span><input id="founderOnly" type="checkbox" checked /></div>
+          <div class="toggle-row"><span>Require approval for external actions</span><input id="approval" type="checkbox" checked /></div>
+          <div class="toggle-row"><span>Allow long-term memory</span><input id="memory" type="checkbox" checked /></div>
+          <div class="toggle-row"><span>Allow device-control requests</span><input id="deviceControl" type="checkbox" /></div>
+          <div class="toggle-row"><span>Private-cloud connection</span><input id="cloudEnabled" type="checkbox" /></div>
+          <button class="primary save" data-save="authority">Save Authority</button>
+        </article>
+
+        <article class="panel">
+          <h3>Private Brain</h3>
+          <label>API / Brain endpoint</label>
+          <input id="brainUrl" inputmode="url" placeholder="https://your-mimmir-brain.example/api" />
+
+          <label>Device alias</label>
+          <input id="deviceAlias" value="Founder iPhone" />
+
+          <div class="readout">
+            <span>Connection</span><strong id="brainState">DISCONNECTED</strong>
+          </div>
+
+          <button id="testBrain" class="ghost">Test Endpoint</button>
+          <p class="small">Do not paste permanent secret API keys into a browser app. Production secrets belong on the private server.</p>
+        </article>
+
+        <article class="panel">
+          <h3>Memory Vault</h3>
+          <label>Founder note</label>
+          <textarea id="vaultNote" rows="5" placeholder="Local private note..."></textarea>
+          <button id="saveNote" class="primary">Seal Locally</button>
+          <button id="clearNote" class="ghost danger">Erase Note</button>
+          <p class="small">This starter stores the note only in this browser's local storage. It is not a true encrypted vault yet.</p>
+        </article>
+
+        <article class="panel">
+          <h3>System Controls</h3>
+          <button id="exportConfig" class="ghost">Export Configuration</button>
+          <button id="panicLock" class="ghost danger">Emergency Lock</button>
+          <button id="wipeLocal" class="ghost danger">Factory Reset Local Core</button>
+        </article>
+
+        <article class="panel">
+          <h3>Build Status</h3>
+          <div class="readout"><span>Interface</span><strong>READY</strong></div>
+          <div class="readout"><span>Offline shell</span><strong>READY</strong></div>
+          <div class="readout"><span>Founder Gate</span><strong>READY</strong></div>
+          <div class="readout"><span>Cloud Brain</span><strong>NOT CONNECTED</strong></div>
+          <div class="readout"><span>Native iOS controls</span><strong>PHASE 2</strong></div>
+          <div class="readout"><span>Voice wake word</span><strong>PHASE 2</strong></div>
+        </article>
+      </div>
+
+      <footer>
+        MIMMIR // Founder-controlled local shell • <span id="year"></span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

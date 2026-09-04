@@ -1,0 +1,17 @@
+{
+  "name": "Mimmir Founder's Console",
+  "short_name": "Mimmir",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080b10",
+  "theme_color": "#080b10",
+  "description": "Founder-controlled local shell for the Mimmir AI system.",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
