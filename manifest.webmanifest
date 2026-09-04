@@ -4,14 +4,5 @@
   "start_url": "./",
   "display": "standalone",
   "background_color": "#080b10",
-  "theme_color": "#080b10",
-  "description": "Founder-controlled local shell for the Mimmir AI system.",
-  "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
-  ]
+  "theme_color": "#080b10"
 }
